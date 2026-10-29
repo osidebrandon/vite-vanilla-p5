@@ -9,6 +9,7 @@
       "name": "example-client",
       "version": "1.0.0",
       "dependencies": {
+        "@ac-state": "workspace:*",
         "actor-sync": "workspace:*",
         "p5": "^1.11.3",
       },
