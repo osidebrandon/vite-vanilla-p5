@@ -1,0 +1,16 @@
+{
+  "name": "@ac-state",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./v0": "./v0/index.ts",
+    "./v1": "./v1/index.ts"
+  },
+  "scripts": {
+    "test": "bun test ./tests"
+  },
+  "dependencies": {
+    "@events": "workspace:*"
+  }
+}

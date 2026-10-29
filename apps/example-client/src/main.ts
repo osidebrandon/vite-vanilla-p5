@@ -23,23 +23,3 @@ const sketch = (canvas: p5) => {
 
 const app = document.querySelector<HTMLElement>("#app")!;
 const p = new p5(sketch, app);
-
-// ================================= //
-
-interface IActor {
-  id: string;
-}
-
-interface IActorManager {
-  add: (actor: IActor) => void;
-  remove: (actorId: string) => void;
-}
-
-interface IWorld {
-  readonly actors: IActorManager;
-
-  save: (path: string) => void;
-  load: (path: string) => void;
-
-  tick: () => void;
-}

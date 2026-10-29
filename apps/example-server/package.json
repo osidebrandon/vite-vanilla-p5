@@ -1,0 +1,16 @@
+{
+  "name": "example-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cd ../.. && bun --watch ./apps/example-server/src/index.ts",
+    "start:v0": "bun src/v0/index.ts",
+    "start:v1": "bun src/v1/index.ts"
+  },
+  "dependencies": {
+    "actor-sync": "workspace:*",
+    "@ac-state": "workspace:*",
+    "@lifecycles": "workspace:*",
+    "socket.io": "^4.8.4"
+  }
+}
