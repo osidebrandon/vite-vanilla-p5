@@ -5,7 +5,8 @@
   "type": "module",
   "exports": {
     "./v0": "./v0/index.ts",
-    "./v1": "./v1/index.ts"
+    "./v1": "./v1/index.ts",
+    "./v2": "./v2/index.ts"
   },
   "scripts": {
     "test": "bun test ./tests"

@@ -1,4 +1,4 @@
-import { lifecycle } from "@lifecycles";
+import { basicLifecycle } from "@lifecycles";
 import { ActorEvent, ComponentEvent, createAC } from "@ac-state/v1";
 
 type MyComponents = {
@@ -44,7 +44,7 @@ const onComponentRemoved = ac.createEventHandler<ComponentEvent>((event) => {
   console.log(event);
 });
 
-lifecycle({
+basicLifecycle({
   onStart: () => {
     ac.on("actor:spawned", onActorCreated);
     ac.on("actor:destroyed", onActorDestroyed);

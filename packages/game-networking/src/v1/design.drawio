@@ -1,0 +1,57 @@
+<mxfile host="65bd71144e">
+    <diagram id="SKJV1JsePdMiT92gHJ61" name="Page-1">
+        <mxGraphModel dx="918" dy="448" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="F5LtydlNBtsbpAvuABNM-14" edge="1" parent="1" source="F5LtydlNBtsbpAvuABNM-1" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=1;" target="F5LtydlNBtsbpAvuABNM-13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="F5LtydlNBtsbpAvuABNM-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Dispatcher" vertex="1">
+                    <mxGeometry height="40" width="80" x="640" y="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="2WXa2hHVlQRg2R_nRqDn-2" edge="1" parent="1" source="F5LtydlNBtsbpAvuABNM-2" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.021;entryY=0.363;entryDx=0;entryDy=0;" target="2WXa2hHVlQRg2R_nRqDn-1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="F5LtydlNBtsbpAvuABNM-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Socket&lt;div&gt;Listener&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="40" width="80" x="80" y="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="F5LtydlNBtsbpAvuABNM-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Socket&lt;div&gt;Sender&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="40" width="80" x="80" y="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="F5LtydlNBtsbpAvuABNM-23" edge="1" parent="1" source="F5LtydlNBtsbpAvuABNM-13" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1.042;entryY=0.652;entryDx=0;entryDy=0;" target="2WXa2hHVlQRg2R_nRqDn-1">
+                    <mxGeometry relative="1" x="-0.4615" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="800" y="299.26"/>
+                        </Array>
+                        <mxPoint x="400" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="F5LtydlNBtsbpAvuABNM-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Handler" vertex="1">
+                    <mxGeometry height="40" width="80" x="760" y="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="2WXa2hHVlQRg2R_nRqDn-3" edge="1" parent="1" source="2WXa2hHVlQRg2R_nRqDn-1" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.021;exitY=0.354;exitDx=0;exitDy=0;" target="F5LtydlNBtsbpAvuABNM-1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2WXa2hHVlQRg2R_nRqDn-5" edge="1" parent="1" source="2WXa2hHVlQRg2R_nRqDn-1" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.021;exitY=0.637;exitDx=0;exitDy=0;" target="F5LtydlNBtsbpAvuABNM-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2WXa2hHVlQRg2R_nRqDn-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Event Bus" vertex="1">
+                    <mxGeometry height="280" width="80" x="360" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="2WXa2hHVlQRg2R_nRqDn-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fff2cc;strokeColor=#B3B3B3;" value="&lt;b&gt;&lt;i&gt;Socket Events&lt;/i&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/b&gt;&lt;div&gt;- &quot;join-game&quot;&lt;/div&gt;&lt;div&gt;- &quot;leave-game&quot;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="80" width="120" x="200" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="2WXa2hHVlQRg2R_nRqDn-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fff2cc;strokeColor=#B3B3B3;" value="&lt;b&gt;&lt;i&gt;Dispatched Events&lt;/i&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/b&gt;&lt;div&gt;- &quot;join-game&quot;&lt;/div&gt;&lt;div&gt;- &quot;leave-game&quot;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="80" width="120" x="480" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="2WXa2hHVlQRg2R_nRqDn-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fff2cc;strokeColor=#B3B3B3;" value="&lt;b&gt;&lt;i&gt;Sender Events&lt;/i&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/b&gt;&lt;div&gt;- &quot;to-owner&quot;&lt;/div&gt;&lt;div&gt;- &quot;to-player&quot;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;- &quot;to-all&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;{&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; type: &quot;message&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; data: &quot;Hello world!&quot;,&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="160" width="120" x="640" y="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="2WXa2hHVlQRg2R_nRqDn-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fff2cc;strokeColor=#B3B3B3;" value="&lt;b&gt;&lt;i&gt;Socket Sender&lt;/i&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/b&gt;&lt;div&gt;- Takes the &quot;to-...&quot; and decides the scope of clients to emit to.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- emit(type, data);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="120" width="120" x="200" y="320" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,131 @@
+<mxfile host="65bd71144e">
+    <diagram id="wNtOeNJPb5zy6Z8-jCpl" name="Page-1">
+        <mxGraphModel dx="1643" dy="1908" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="ZK8PBQndyeZdTgYHNnhD-8" edge="1" parent="1" source="7zeFGlKSfU-YnvjBrdES-14" style="edgeStyle=none;html=1;exitX=1.026;exitY=0.879;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=1;" target="ZK8PBQndyeZdTgYHNnhD-6">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="559.9999999999998" y="280" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xYR_tRWzzkA7HjOO9Lpk-3" edge="1" parent="1" source="ZK8PBQndyeZdTgYHNnhD-2" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.003;entryY=0.858;entryDx=0;entryDy=0;" target="7zeFGlKSfU-YnvjBrdES-14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ZK8PBQndyeZdTgYHNnhD-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Transport&lt;div&gt;Listener&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="80" width="80" x="40" y="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="W0gpP2tvT26DOw7wuyj1-4" edge="1" parent="1" source="ZK8PBQndyeZdTgYHNnhD-6" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="W0gpP2tvT26DOw7wuyj1-1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="680" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ZK8PBQndyeZdTgYHNnhD-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;div&gt;Custom&lt;/div&gt;Handler" vertex="1">
+                    <mxGeometry height="40" width="80" x="640" y="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="7zeFGlKSfU-YnvjBrdES-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;Command&lt;/div&gt;&lt;div&gt;Dispatcher&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="280" width="80" x="320" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="58BBFppUE_qont3F2RFH-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=3;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;Built-In&amp;nbsp;&lt;/b&gt;{&lt;div&gt;&amp;nbsp; &quot;join-game&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &quot;leave-game&quot;&lt;/div&gt;&lt;div&gt;}&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="70" width="120" x="160" y="-15" as="geometry"/>
+                </mxCell>
+                <mxCell id="58BBFppUE_qont3F2RFH-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=3;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;Events&amp;nbsp;&lt;/b&gt;{&lt;div&gt;&amp;nbsp; &quot;player-joined&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &quot;player-left&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; ... custom&lt;/div&gt;&lt;div&gt;}&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="90" width="120" x="480" y="430" as="geometry"/>
+                </mxCell>
+                <mxCell id="58BBFppUE_qont3F2RFH-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=3;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;Sender&amp;nbsp;&lt;/b&gt;{&lt;div&gt;&amp;nbsp; toOwner,&lt;/div&gt;&lt;div&gt;&amp;nbsp; toPlayer,&lt;/div&gt;&lt;div&gt;&amp;nbsp; toOthers,&lt;/div&gt;&lt;div&gt;&amp;nbsp; toAll,&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;This &lt;b&gt;&lt;u&gt;sender &lt;/u&gt;&lt;/b&gt;contract will be for all types of rooms, just their functional implementation will be scoped to a room.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;This sender will be provided as a context object into the consumer handlers.&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="225" width="200" x="560" y="-240" as="geometry"/>
+                </mxCell>
+                <mxCell id="xYR_tRWzzkA7HjOO9Lpk-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=3;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;Custom&amp;nbsp;&lt;/b&gt;{&lt;div&gt;&amp;nbsp; &quot;input&quot;&lt;/div&gt;&lt;div&gt;}&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="120" x="160" y="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="xYR_tRWzzkA7HjOO9Lpk-9" edge="1" parent="1" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="xYR_tRWzzkA7HjOO9Lpk-8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="80" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xYR_tRWzzkA7HjOO9Lpk-11" edge="1" parent="1" source="7zeFGlKSfU-YnvjBrdES-14" style="edgeStyle=none;html=1;exitX=1.001;exitY=0.144;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="xYR_tRWzzkA7HjOO9Lpk-10">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="559.9999999999998" y="65" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xYR_tRWzzkA7HjOO9Lpk-15" edge="1" parent="1" source="xYR_tRWzzkA7HjOO9Lpk-8" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="xYR_tRWzzkA7HjOO9Lpk-12">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="800" y="85"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xYR_tRWzzkA7HjOO9Lpk-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Join Game&lt;/span&gt;&lt;/div&gt;Handler" vertex="1">
+                    <mxGeometry height="40" width="80" x="640" y="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="xYR_tRWzzkA7HjOO9Lpk-14" edge="1" parent="1" source="xYR_tRWzzkA7HjOO9Lpk-10" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="xYR_tRWzzkA7HjOO9Lpk-13">
+                    <mxGeometry relative="1" x="0.2154" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="880" y="45"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xYR_tRWzzkA7HjOO9Lpk-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Leave Game&lt;/span&gt;&lt;/div&gt;Handler" vertex="1">
+                    <mxGeometry height="40" width="80" x="640" y="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="W0gpP2tvT26DOw7wuyj1-5" edge="1" parent="1" source="xYR_tRWzzkA7HjOO9Lpk-12" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="W0gpP2tvT26DOw7wuyj1-1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="800" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xYR_tRWzzkA7HjOO9Lpk-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Custom&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Join Game&lt;/span&gt;&lt;/div&gt;Handler" vertex="1">
+                    <mxGeometry height="80" width="80" x="760" y="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="W0gpP2tvT26DOw7wuyj1-6" edge="1" parent="1" source="xYR_tRWzzkA7HjOO9Lpk-13" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="W0gpP2tvT26DOw7wuyj1-1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="880" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xYR_tRWzzkA7HjOO9Lpk-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Custom&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Leave Game&lt;/span&gt;&lt;/div&gt;Handler" vertex="1">
+                    <mxGeometry height="80" width="80" x="840" y="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="xYR_tRWzzkA7HjOO9Lpk-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=3;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;&lt;u&gt;Built-In Commands&lt;/u&gt;&lt;/b&gt; are specific to the game room setup.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;b&gt;Single Room&lt;/b&gt;&lt;/u&gt;&amp;nbsp;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;vs&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&lt;b&gt;&lt;u&gt;Multi Room&lt;/u&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;This also effects the handlers the consumer must implement.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;This also effects the context scope the handlers will receive.&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;Ex: sender.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="160" width="200" x="320" y="-175" as="geometry"/>
+                </mxCell>
+                <mxCell id="Ty_ZNBnFIgW4KnYPddsL-5" edge="1" parent="1" source="Ty_ZNBnFIgW4KnYPddsL-1" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ZK8PBQndyeZdTgYHNnhD-6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Ty_ZNBnFIgW4KnYPddsL-6" edge="1" parent="1" source="Ty_ZNBnFIgW4KnYPddsL-1" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="xYR_tRWzzkA7HjOO9Lpk-12">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="800" y="180"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Ty_ZNBnFIgW4KnYPddsL-7" edge="1" parent="1" source="Ty_ZNBnFIgW4KnYPddsL-1" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="xYR_tRWzzkA7HjOO9Lpk-13">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="880" y="180"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="Ty_ZNBnFIgW4KnYPddsL-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Framework&lt;div&gt;Context&lt;div&gt;{ sender }&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="80" x="640" y="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="Ty_ZNBnFIgW4KnYPddsL-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=3;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;&lt;u&gt;Context&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Two types of context.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Framework Context: This is only the &lt;u&gt;sender&lt;/u&gt;.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Custom Context: Any context the user wants.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;These will be combine before injecting into the handlers.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;{ sender, ...custom }&lt;br&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="200" width="200" x="800" y="-215" as="geometry"/>
+                </mxCell>
+                <mxCell id="W0gpP2tvT26DOw7wuyj1-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;Transport&lt;/div&gt;&lt;div&gt;Sender&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="40" width="80" x="40" y="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="q0EMaNpU3crNpFr_ws3L-2" edge="1" parent="1" source="q0EMaNpU3crNpFr_ws3L-1" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ZK8PBQndyeZdTgYHNnhD-6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="q0EMaNpU3crNpFr_ws3L-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;shadow=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Custom&lt;div&gt;Context&lt;div&gt;{ ...custom }&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="60" width="80" x="440" y="160" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

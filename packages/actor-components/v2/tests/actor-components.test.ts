@@ -11,6 +11,12 @@ type TestComponents = {
   health: { current: number; max: number };
 };
 
+type TestMetadata = {
+  type: string;
+  team: string;
+  details: { owner: string };
+};
+
 const getProfileDisplayName = (
   component: Component<TestComponents>,
 ): string => {
@@ -146,4 +152,75 @@ test("actor lifecycle event payloads describe the post-mutation state", () => {
   expect(ac.destroyActor(actor.id)).toBe(actor);
   expect(destroyedEvents).toHaveLength(1);
   expect(ac.getActor(destroyedEvents[0].actor.id)).toBeUndefined();
+});
+
+test("metadata is omitted from the default actor and snapshot types", () => {
+  const ac = createAC<TestComponents>();
+  const snapshot = ac.createActorSnapshot("plain-actor", []);
+  const actor = ac.spawnActor(snapshot);
+
+  expect(Object.prototype.hasOwnProperty.call(snapshot, "metadata")).toBe(
+    false,
+  );
+  expect(Object.prototype.hasOwnProperty.call(actor, "metadata")).toBe(false);
+  expect(Object.prototype.hasOwnProperty.call(actor, "setMetadata")).toBe(
+    false,
+  );
+
+  if (false) {
+    // @ts-expect-error Metadata is not part of the default actor type.
+    actor.metadata;
+    // @ts-expect-error setMetadata is only available with a metadata type.
+    actor.setMetadata(undefined);
+  }
+});
+
+test("metadata is copied into snapshots and changed through actor events", () => {
+  const ac = createAC<TestComponents, TestMetadata>();
+  const snapshot = ac.createActorSnapshot("actor-1", [
+    { type: "health", current: 100, max: 100 },
+  ], {
+    type: "player",
+    team: "blue",
+    details: { owner: "Ada" },
+  });
+  const stateSnapshot = ac.createStateSnapshot([snapshot]);
+  const restoredAC = createAC<TestComponents, TestMetadata>();
+  restoredAC.initialize(stateSnapshot);
+
+  const actor = restoredAC.getActor("actor-1");
+  expect(actor?.metadata.type).toBe("player");
+  expect(actor?.metadata.details.owner).toBe("Ada");
+
+  const actorChanges: ActorEventPayload<TestComponents, TestMetadata>[] = [];
+  let componentChanges = 0;
+  restoredAC.on("actor:changed", (event) => actorChanges.push(event));
+  restoredAC.on("component:changed", () => componentChanges++);
+
+  actor?.getComponent("health")?.setValue({ current: 75, max: 100 });
+  expect(actorChanges).toHaveLength(0);
+  expect(componentChanges).toBe(1);
+
+  actor?.setMetadata({
+    type: "npc",
+    team: "green",
+    details: { owner: "Grace" },
+  });
+
+  expect(actorChanges).toHaveLength(1);
+  expect(actorChanges[0].actor.metadata.type).toBe("npc");
+  expect(actorChanges[0].actor.metadata.details.owner).toBe("Grace");
+  expect(actor?.metadata.type).toBe("npc");
+
+  actorChanges[0].actor.metadata.details.owner = "Changed event snapshot";
+  expect(actor?.metadata.details.owner).toBe("Grace");
+
+  const actorSnapshot = actor?.snapshot();
+  if (actorSnapshot && "metadata" in actorSnapshot) {
+    actorSnapshot.metadata.details.owner = "Changed actor snapshot";
+  }
+  expect(actor?.metadata.details.owner).toBe("Grace");
+
+  // @ts-expect-error Metadata is required when the metadata type is provided.
+  ac.createActorSnapshot("missing-metadata", []);
 });

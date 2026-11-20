@@ -1,0 +1,30 @@
+{
+  "name": "game-networking",
+  "version": "0.0.1",
+  "description": "Minimal reusable Bun and TypeScript library",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "start:example:server": "bun src/v1/server",
+    "start:v2": "bun src/v2/index",
+    "build": "bun build src/index.ts --outdir dist --target bun",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "typescript": "^5.8.0"
+  },
+  "dependencies": {
+    "@events": "workspace:*",
+    "@lifecycles": "workspace:*",
+    "socket.io": "^4.8.4",
+    "socket.io-client": "^4.8.4",
+    "uuid": "^14.0.3"
+  }
+}

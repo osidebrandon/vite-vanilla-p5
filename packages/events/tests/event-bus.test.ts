@@ -48,3 +48,42 @@ test("keeps methods bound when detached from the bus", () => {
 
   expect(created).toEqual([{ actorId: "player-0" }]);
 });
+
+test("notifies onAny listeners after event-specific listeners", () => {
+  const bus = new EventBus<TestEvents>();
+  const calls: string[] = [];
+
+  bus.on("actor:created", (event) => {
+    calls.push(`specific:${event.actorId}`);
+  });
+  bus.onAny((eventName, payload) => {
+    calls.push(`${eventName}:${payload.actorId}`);
+  });
+
+  bus.publish("actor:created", { actorId: "player-0" });
+  bus.publish("actor:destroyed", { actorId: "player-1" });
+
+  expect(calls).toEqual([
+    "specific:player-0",
+    "actor:created:player-0",
+    "actor:destroyed:player-1",
+  ]);
+});
+
+test("offAll removes event-specific and onAny listeners", () => {
+  const { on, onAny, offAll, publish } = new EventBus<TestEvents>();
+  const calls: string[] = [];
+
+  on("actor:created", () => {
+    calls.push("specific");
+  });
+  onAny(() => {
+    calls.push("any");
+  });
+
+  publish("actor:created", { actorId: "player-0" });
+  offAll();
+  publish("actor:created", { actorId: "player-1" });
+
+  expect(calls).toEqual(["specific", "any"]);
+});
